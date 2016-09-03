@@ -21,9 +21,17 @@ public class CeasarCipherPuzzle
         PuzzleWord = randomChars.ToArray();
     }
 
-    public void CalculateOffset(int batteryCount)
+    public void CalculateOffset(int batteryCount, string serial)
     {
         Offset = batteryCount;
+
+        var evens = "02468".ToCharArray();
+        var lastchar = serial[5];
+
+        if (evens.Contains(lastchar))
+        {
+            Offset += 1;
+        }
     }
 
     public bool CheckAnswer(char[] answer)

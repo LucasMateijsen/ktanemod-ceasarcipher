@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Text;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -27,16 +26,25 @@ public class CeasarCipherModule : CipherModule
 	}
 
 	private void SetDisplay()
-    {
-        int batteryCount = 0;
-        List<string> responses = GetComponent<KMBombInfo>().QueryWidgets(KMBombInfo.QUERYKEY_GET_BATTERIES, null);
-        foreach (string response in responses)
+	{
+        var serial = string.Empty;
+        var serialResponses = GetComponent<KMBombInfo>().QueryWidgets(KMBombInfo.QUERYKEY_GET_SERIAL_NUMBER, null);
+        foreach (var serialResponse in serialResponses)
         {
-            Dictionary<string, int> responseDict = JsonConvert.DeserializeObject<Dictionary<string, int>>(response);
-            batteryCount += responseDict["numbatteries"];
+            Dictionary<string, string> serialDict = JsonConvert.DeserializeObject<Dictionary<string, string>>(serialResponse);
+            serial = serialDict["serial"];
         }
 
-        Ccp.CalculateOffset(batteryCount);
+
+        var batteriesCount = 0;
+        var batteriesResponses = GetComponent<KMBombInfo>().QueryWidgets(KMBombInfo.QUERYKEY_GET_BATTERIES, null);
+        foreach (var batteriesResponse in batteriesResponses)
+        {
+            Dictionary<string, int> batteriesDict = JsonConvert.DeserializeObject<Dictionary<string, int>>(batteriesResponse);
+            batteriesCount += batteriesDict["numbatteries"];
+        }
+
+        Ccp.CalculateOffset(batteriesCount, serial);
         DisplayText.text = Ccp.GetDisplayText();
 	}
 }
