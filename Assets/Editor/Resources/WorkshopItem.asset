@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Name: WorkshopItem
   m_EditorClassIdentifier: 
   WorkshopPublishedFileID: 757232985
-  Title: Math Is Hard
-  Description: 'Are you smarter than a bomb?
-
-
-    Answer these simple mathematical questions and defuse the bomb!
-
-
-    [url=https://rawgit.com/timtmok/ktanemod-math/master/Manual/Math.html]Link to
-    manual[/url]'
+  Title: Ceasar Cipher
+  Description: "Communication was dangerous back in the days.\nCan you figure out
+    what the original message was?\n\n\nDecipher the characters on the display with
+    the help of ceasars tactics. Each battery offsets the characters by one negative.
+    There's no delete button so press those buttons carefully!\n\nFor example: if
+    there are two batteries, the offset is -2\nSo D becomes B and L becomes J\n\n[url=https://rawgit.com/LucasMateijsen/ktanemod-ceasarcipher/master/Manual/CeasarCipher.html]Link
+    to\r the manual[/url]\n\n------\n\nFuture updates will implement the serial number
+    and status indicators. Furthermore it might even challenge you to figure out by
+    yourself wether you are dealing with a positive or negative offset!"
   PreviewImage: {fileID: 2800000, guid: 8c1678337d414074ca57b4b2024a8b19, type: 3}
   Tags:
   - Module
