@@ -4,29 +4,29 @@ using UnityEngine;
 
 public class CeasarCipherModule : CipherModule
 {
-	public TextMesh DisplayText;
+    public TextMesh DisplayText;
 
-	void Start()
-	{
-		DisplayText.text = string.Empty;
+    void Start()
+    {
+        DisplayText.text = string.Empty;
         Init();
-		GetComponent<KMBombModule>().OnActivate += SetDisplay;
-	}
+        GetComponent<KMBombModule>().OnActivate += SetDisplay;
+    }
 
-	protected override void Solve()
-	{
+    protected override void Solve()
+    {
         if (Answer.Length != 5) return;
 
-		if (Ccp.CheckAnswer(Answer.ToCharArray()))
-			GetComponent<KMBombModule>().HandlePass();
-		else
-			GetComponent<KMBombModule>().HandleStrike();
+        if (Ccp.CheckAnswer(Answer.ToCharArray()))
+            GetComponent<KMBombModule>().HandlePass();
+        else
+            GetComponent<KMBombModule>().HandleStrike();
 
-		Answer = string.Empty;
-	}
+        Answer = string.Empty;
+    }
 
-	private void SetDisplay()
-	{
+    private void SetDisplay()
+    {
         var serial = string.Empty;
         var serialResponses = GetComponent<KMBombInfo>().QueryWidgets(KMBombInfo.QUERYKEY_GET_SERIAL_NUMBER, null);
         foreach (var serialResponse in serialResponses)
@@ -34,7 +34,6 @@ public class CeasarCipherModule : CipherModule
             Dictionary<string, string> serialDict = JsonConvert.DeserializeObject<Dictionary<string, string>>(serialResponse);
             serial = serialDict["serial"];
         }
-
 
         var batteriesCount = 0;
         var batteriesResponses = GetComponent<KMBombInfo>().QueryWidgets(KMBombInfo.QUERYKEY_GET_BATTERIES, null);
@@ -46,5 +45,5 @@ public class CeasarCipherModule : CipherModule
 
         Ccp.CalculateOffset(batteriesCount, serial);
         DisplayText.text = Ccp.GetDisplayText();
-	}
+    }
 }

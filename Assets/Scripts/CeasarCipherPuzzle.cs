@@ -5,7 +5,7 @@ public class CeasarCipherPuzzle
 {
     public int[] PuzzleWord;
     public int Offset;
-    
+
     public CeasarCipherPuzzle()
     {
         // Generate word with 5 random characters
@@ -23,8 +23,20 @@ public class CeasarCipherPuzzle
 
     public void CalculateOffset(int batteryCount, string serial)
     {
+        // Offset by Battery count
         Offset = batteryCount;
 
+        // Offset by Serial vowel check
+        var vowels = "AEIOU".ToCharArray();
+        var serialArr = serial.ToCharArray();
+        var hasVowels = serialArr.Intersect(vowels).Any();
+
+        if (hasVowels)
+        {
+            Offset -= 1;
+        }
+
+        // Offset by Serial even ending
         var evens = "02468".ToCharArray();
         var lastchar = serial[5];
 
@@ -36,7 +48,7 @@ public class CeasarCipherPuzzle
 
     public bool CheckAnswer(char[] answer)
     {
-        var charsAsInt = answer.Select(x => (int) x).ToArray();
+        var charsAsInt = answer.Select(x => (int)x).ToArray();
 
         for (var i = 0; i < PuzzleWord.Length; i++)
         {
@@ -72,9 +84,9 @@ public class CeasarCipherPuzzle
     {
         var text = "";
 
-        for(int i = 0; i < PuzzleWord.Length; i++)
+        for (int i = 0; i < PuzzleWord.Length; i++)
         {
-            text += (char) GetCharWithOffset(PuzzleWord[i], Offset);
+            text += (char)GetCharWithOffset(PuzzleWord[i], Offset);
         }
 
         return text;

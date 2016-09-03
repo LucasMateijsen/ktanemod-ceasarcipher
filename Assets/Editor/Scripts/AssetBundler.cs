@@ -80,7 +80,7 @@ public class AssetBundler
     {
         Debug.LogFormat("Creating \"{0}\" AssetBundle...", BUNDLE_FILENAME);
 
-        if (ModConfig.Instance == null 
+        if (ModConfig.Instance == null
             || ModConfig.ID == ""
             || ModConfig.OutputFolder == "")
         {
@@ -187,7 +187,7 @@ public class AssetBundler
 
         //modify the csproj (if needed)
         var csproj = File.ReadAllText("ktanemodkit.CSharp.csproj");
-        csproj = csproj.Replace("<AssemblyName>Assembly-CSharp</AssemblyName>", "<AssemblyName>"+ assemblyName + "</AssemblyName>");
+        csproj = csproj.Replace("<AssemblyName>Assembly-CSharp</AssemblyName>", "<AssemblyName>" + assemblyName + "</AssemblyName>");
         File.WriteAllText("modkithelper.CSharp.csproj", csproj);
 
         string path = "modkithelper.CSharp.csproj";
@@ -263,7 +263,7 @@ public class AssetBundler
 
         //CompilerMessage
         var compilerMessageType = assembly.GetType("UnityEditor.Scripting.Compilers.CompilerMessage");
-        FieldInfo messageField = compilerMessageType.GetField("message"); 
+        FieldInfo messageField = compilerMessageType.GetField("message");
 
         //Start compiling
         beginCompilingMethod.Invoke(monoCompiler, null);
@@ -407,8 +407,8 @@ public class AssetBundler
         //not be accessible within the asset bundle. Unity has deprecated this flag claiming it is now always active, but due to a bug
         //we must still include it (and ignore the warning).
         BuildPipeline.BuildAssetBundles(
-            TEMP_BUILD_FOLDER, 
-            BuildAssetBundleOptions.DeterministicAssetBundle | BuildAssetBundleOptions.CollectDependencies, 
+            TEMP_BUILD_FOLDER,
+            BuildAssetBundleOptions.DeterministicAssetBundle | BuildAssetBundleOptions.CollectDependencies,
             BuildTarget.StandaloneWindows);
 #pragma warning restore 618
 
@@ -432,7 +432,7 @@ public class AssetBundler
     /// </summary>
     protected void CopyModSettings()
     {
-        if(File.Exists("Assets/modSettings.json"))
+        if (File.Exists("Assets/modSettings.json"))
         {
             File.Copy("Assets/modSettings.json", outputFolder + "/modSettings.json");
         }
@@ -442,7 +442,7 @@ public class AssetBundler
     /// </summary>
     protected void CopyManual()
     {
-        if(Directory.Exists("Manual/pdfs"))
+        if (Directory.Exists("Manual/pdfs"))
         {
             DirectoryCopyPDFs("Manual/pdfs", outputFolder + "/Manual", true);
         }
@@ -475,11 +475,11 @@ public class AssetBundler
         foreach (FileInfo file in files)
         {
             string temppath = Path.Combine(destDirName, file.Name);
-            if(file.Extension.ToLower() == ".pdf")
+            if (file.Extension.ToLower() == ".pdf")
             {
                 file.CopyTo(temppath, false);
             }
-            
+
         }
 
         // If copying subdirectories, copy them and their contents to new location.
