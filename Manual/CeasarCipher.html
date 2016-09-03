@@ -26,7 +26,7 @@
 			<p>Decipher the characters on the display with the help of ceasars tactics. Each battery offsets the characters by one negative. There's no delete button so press those buttons carefully!
 			</p>
 			<p>For example: if the offset is -2,
-			<b>D</b> becomes <b>B</b> and <b>L</b> becomes <b>J.</b> The tabels below can be used to calculate the needed offset.
+			<b>D</b> becomes <b>B</b> and <b>L</b> becomes <b>J.</b> The tabels below can be used to calculate the needed offset. If the offset column contains a <strong>=</strong> that value should be used, regardless of other rules that apply.
 			</p>
 			<table>
 				<tr>
@@ -58,10 +58,17 @@
 						+1
 					<tr>
 					<td>
-						If label <em>CAR</em> is present
+						If label CAR is present
 					</td>
 					<td>
 						+1
+				</tr>
+				<tr>
+					<td>
+						If parallel port is present and label NSA is on
+					</td>
+					<td>
+						=0
 				</tr>			
 			</table>
         </div>
