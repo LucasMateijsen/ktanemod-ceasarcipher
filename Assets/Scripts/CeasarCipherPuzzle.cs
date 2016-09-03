@@ -74,11 +74,16 @@ public class CeasarCipherPuzzle
 
     private int GetCharWithOffset(int ch, int offset)
     {
-        int result = ch + offset;
+        int result = ch - offset;
 
-        if (result > 90)
+        //if (result > 90)
+        //{
+        //    result = 64 + (result - 90);
+        //}
+
+        if (result < 65)
         {
-            result = 64 + (result - 90);
+            result = 91 - (65 - result);
         }
 
         return result;
