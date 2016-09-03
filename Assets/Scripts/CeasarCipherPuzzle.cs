@@ -21,10 +21,19 @@ public class CeasarCipherPuzzle
         PuzzleWord = randomChars.ToArray();
     }
 
-    public void CalculateOffset(int batteryCount, string serial)
+    public void CalculateOffset(int batteryCount, string serial, List<string> ports, Dictionary<string, bool> indicators)
     {
+        Offset = 0;
+
+        // Check for paralel port and FRK. If so, we are done
+        var frkOn = indicators.Any(x => x.Key == "NSA" && x.Value);
+        if (frkOn && ports.Contains("Parallel"))
+        {
+            return;
+        }
+
         // Offset by Battery count
-        Offset = batteryCount;
+        Offset += batteryCount;
 
         // Offset by Serial vowel check
         var vowels = "AEIOU".ToCharArray();
@@ -34,6 +43,12 @@ public class CeasarCipherPuzzle
         if (hasVowels)
         {
             Offset -= 1;
+        }
+
+        // Offset by CAR indicator
+        if (indicators.ContainsKey("CAR"))
+        {
+            Offset += 1;
         }
 
         // Offset by Serial even ending

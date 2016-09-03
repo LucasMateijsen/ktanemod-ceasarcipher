@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -27,6 +28,24 @@ public class CeasarCipherModule : CipherModule
 
     private void SetDisplay()
     {
+        var indicators = new Dictionary<string, bool>();
+        var indicatorsReponses = GetComponent<KMBombInfo>().QueryWidgets(KMBombInfo.QUERYKEY_GET_INDICATOR, null);
+        foreach (var indicatorsReponse in indicatorsReponses)
+        {
+            var indicatorDictionary = JsonConvert.DeserializeObject<Dictionary<string, string>>(indicatorsReponse);
+            var labelName = indicatorDictionary["label"];
+            var labelStatus = Convert.ToBoolean(indicatorDictionary["on"]);
+            indicators.Add(labelName, labelStatus);
+        }
+
+        var ports = new List<string>();
+        var portsReponses = GetComponent<KMBombInfo>().QueryWidgets(KMBombInfo.QUERYKEY_GET_PORTS, null);
+        foreach (var portsReponse in portsReponses)
+        {
+            var portsDict = JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(portsReponse);
+            ports = portsDict["presentPorts"];
+        }
+
         var serial = string.Empty;
         var serialResponses = GetComponent<KMBombInfo>().QueryWidgets(KMBombInfo.QUERYKEY_GET_SERIAL_NUMBER, null);
         foreach (var serialResponse in serialResponses)
@@ -43,7 +62,7 @@ public class CeasarCipherModule : CipherModule
             batteriesCount += batteriesDict["numbatteries"];
         }
 
-        Ccp.CalculateOffset(batteriesCount, serial);
+        Ccp.CalculateOffset(batteriesCount, serial, ports, indicators);
         DisplayText.text = Ccp.GetDisplayText();
     }
 }
