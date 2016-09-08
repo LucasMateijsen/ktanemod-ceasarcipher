@@ -18,8 +18,9 @@ MonoBehaviour:
     the help of caesars tactics. The offset is decided by multiple variables. Count
     the batteries, read the serial and check the labels to calculate the offset. Be
     sure to check out our new and updated manual linked below!\n\n[url=https://rawgit.com/LucasMateijsen/ktanemod-ceasarcipher/2702a35/Manual/CeasarCipher.html]Link
-    to\r the manual[/url]\n\n\r\rWe based our prefab on EmojiMath(Math is hard) which
-    you can find [url=https://steamcommunity.com/sharedfiles/filedetails/?id=729096093]here[/url]\n\n------\n\nFuture
+    to\r the manual[/url]\n\nFor mission creators: The module type/name is \"Ceasar
+    Cipher\".\n\n\r\rWe based our prefab on EmojiMath(Math is hard) which you can
+    find [url=https://steamcommunity.com/sharedfiles/filedetails/?id=729096093]here[/url]\n\n------\n\nFuture
     updates might implement a whole new table for when a strike is made. If you have
     any ideas that you would like to see implemented, please let me know in the comments!"
   PreviewImage: {fileID: 2800000, guid: 8c1678337d414074ca57b4b2024a8b19, type: 3}
