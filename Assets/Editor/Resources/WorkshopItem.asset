@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Name: WorkshopItem
   m_EditorClassIdentifier: 
   WorkshopPublishedFileID: 757232985
-  Title: Ceasar Cipher
+  Title: Caesar Cipher
   Description: "Communication was dangerous back in the days.\nCan you figure out
     what the original message was?\n\n\nDecipher the characters on the display with
-    the help of ceasars tactics. The offset is decided by multiple variables. Count
+    the help of caesars tactics. The offset is decided by multiple variables. Count
     the batteries, read the serial and check the labels to calculate the offset. Be
     sure to check out our new and updated manual linked below!\n\n[url=https://rawgit.com/LucasMateijsen/ktanemod-ceasarcipher/2702a35/Manual/CeasarCipher.html]Link
     to\r the manual[/url]\n\n\r\rWe based our prefab on EmojiMath(Math is hard) which
