@@ -17,7 +17,7 @@ MonoBehaviour:
     what the original message was?\n\n\nDecipher the characters on the display with
     the help of caesars tactics. The offset is decided by multiple variables. Count
     the batteries, read the serial and check the labels to calculate the offset. Be
-    sure to check out our new and updated manual linked below!\n\n[url=https://rawgit.com/LucasMateijsen/ktanemod-ceasarcipher/2702a35/Manual/CeasarCipher.html]Link
+    sure to check out our new and updated manual linked below!\n\n[url=https://rawgit.com/LucasMateijsen/ktanemod-ceasarcipher/8bedcf2/Manual/CeasarCipher.html]Link
     to\r the manual[/url]\n\nFor mission creators: The module type/name is \"Ceasar
     Cipher\".\n\n\r\rWe based our prefab on EmojiMath(Math is hard) which you can
     find [url=https://steamcommunity.com/sharedfiles/filedetails/?id=729096093]here[/url]\n\n------\n\nFuture
