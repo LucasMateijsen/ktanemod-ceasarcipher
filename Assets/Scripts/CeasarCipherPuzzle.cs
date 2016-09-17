@@ -91,7 +91,7 @@ public class CeasarCipherPuzzle
         }
 
         var chars = uniqueChars.Select(x => (char)x);
-
+        chars = chars.OrderBy(x => UnityEngine.Random.Range(0, 100)).ToArray();
         return chars.Select(x => x.ToString()).ToArray();
     }
 
