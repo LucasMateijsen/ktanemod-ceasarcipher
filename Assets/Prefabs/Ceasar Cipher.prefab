@@ -3220,7 +3220,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110232}
-  m_Text: '(=:)=)+=(:||:'
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -3438,7 +3438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ModuleType: Ceasar Cipher
-  ModuleDisplayName: Ceasar Cipher
+  ModuleDisplayName: Caesar Cipher
   RequiresTimerVisibility: 0
 --- !u!114 &11439548
 MonoBehaviour:

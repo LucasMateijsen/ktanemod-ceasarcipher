@@ -13,16 +13,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WorkshopPublishedFileID: 757232985
   Title: Caesar Cipher
-  Description: "Communication was dangerous back in the days.\nCan you figure out
-    what the original message was?\n\n\nDecipher the characters on the display with
-    the help of caesars tactics. The offset is decided by multiple variables. Count
-    the batteries, read the serial and check the labels to calculate the offset. Be
-    sure to check out our new and updated manual linked below!\n\n[url=https://rawgit.com/LucasMateijsen/ktanemod-ceasarcipher/8bedcf2/Manual/CeasarCipher.html]Link
-    to\r the manual[/url]\n\nFor mission creators: The module type/name is \"Ceasar
-    Cipher\".\n\n\r\rWe based our prefab on EmojiMath(Math is hard) which you can
-    find [url=https://steamcommunity.com/sharedfiles/filedetails/?id=729096093]here[/url]\n\n------\n\nFuture
-    updates might implement a whole new table for when a strike is made. If you have
-    any ideas that you would like to see implemented, please let me know in the comments!"
+  Description: 'Communication was dangerous back in the days. Can you figure out what
+    the original message was?
+
+
+    Decipher the characters on the display with the help of Caesar''s tactics. The
+    offset is decided by multiple variables. Count the batteries, read the serial
+    and check the labels to calculate the offset.
+
+
+    [url=https://rawgit.com/LucasMateijsen/ktanemod-ceasarcipher/master/Manual/CaesarCipher.html]Manual
+    HTML[/url]
+
+    [url=https://rawgit.com/LucasMateijsen/ktanemod-ceasarcipher/master/Manual/pdfs/Modules/CaesarCipher.pdf]Manual
+    PDF[/url]
+
+
+    For mission creators: The module type/name is "Ceasar Cipher".
+
+
+    We based our prefab on EmojiMath (Math is Hard) which you can find [url=https://steamcommunity.com/sharedfiles/filedetails/?id=729096093]here[/url]'
   PreviewImage: {fileID: 2800000, guid: 8c1678337d414074ca57b4b2024a8b19, type: 3}
   Tags:
   - Module

@@ -63,7 +63,7 @@ public class CeasarCipherPuzzle
 
     public bool CheckAnswer(char[] answer)
     {
-        var charsAsInt = answer.Select(x => (int)x).ToArray();
+        var charsAsInt = answer.Select(x => (int) x).ToArray();
 
         for (var i = 0; i < PuzzleWord.Length; i++)
         {
@@ -84,15 +84,18 @@ public class CeasarCipherPuzzle
         while (uniqueChars.Count < 12)
         {
             var charInt = UnityEngine.Random.Range(65, 91);
-            if (uniqueChars.Contains(charInt) == false)
-            {
+            if (!uniqueChars.Contains(charInt))
                 uniqueChars.Add(charInt);
-            }
         }
 
-        var chars = uniqueChars.Select(x => (char)x);
-        chars = chars.OrderBy(x => UnityEngine.Random.Range(0, 100)).ToArray();
-        return chars.Select(x => x.ToString()).ToArray();
+        var chars = new List<string>();
+        while (uniqueChars.Count > 0)
+        {
+            var index = UnityEngine.Random.Range(0, uniqueChars.Count);
+            chars.Add(((char) uniqueChars[index]).ToString());
+            uniqueChars.RemoveAt(index);
+        }
+        return chars.ToArray();
     }
 
     public string GetDisplayText()
@@ -101,7 +104,7 @@ public class CeasarCipherPuzzle
 
         for (int i = 0; i < PuzzleWord.Length; i++)
         {
-            text += (char)GetCharWithOffset(PuzzleWord[i], Offset);
+            text += (char) GetCharWithOffset(PuzzleWord[i], Offset);
         }
 
         return text;
@@ -110,11 +113,6 @@ public class CeasarCipherPuzzle
     private int GetCharWithOffset(int ch, int offset)
     {
         int result = ch - offset;
-
-        //if (result > 90)
-        //{
-        //    result = 64 + (result - 90);
-        //}
 
         if (result < 65)
         {
