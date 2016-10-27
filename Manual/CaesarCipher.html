@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html class="no-js"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Keep Talking and Nobody Explodes Example Manual Page</title>
-    <meta name="viewport" content="initial-scale=1"> 
+    <meta name="viewport" content="initial-scale=1">
 	<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -14,62 +14,46 @@
     <div class="page page-bg-03">
         		<div class="page-header">
 			<span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
-			<span class="page-header-section-title">caesar</span>
+			<span class="page-header-section-title">Caesar Cipher</span>
 		</div>
         <div class="page-content">
     	    <img src="img/Component.svg" class="diagram">
-            <h2>On the Subject of caesar</h2>
+            <h2>On the Subject of Caesar Cipher</h2>
             <p class="flavour-text">
 					Communication was dangerous back in the days. Can you figure out what the original message was?
 			</p>
 
-			<p>Decipher the characters on the display with the help of caesars tactics. There's no delete button so press those buttons carefully!
-			</p>
+			<p>Decipher the characters on the display with the help of Caesar’s tactics. There’s no delete button, so press those buttons carefully!
 			<p>For example: if the offset is -2,
-			<b>D</b> becomes <b>B</b> and <b>L</b> becomes <b>J.</b> The tabels below can be used to calculate the needed offset. If the offset column contains a <strong>=</strong> that value should be used, regardless of other rules that apply.
+                <b>D</b> becomes <b>B</b> and <b>L</b> becomes <b>J.</b>
+                The table below can be used to calculate the required offset.
+                If the offset column contains an <strong>=</strong> sign, that value should be used, regardless of other rules that apply.
 			</p>
 			<table>
 				<tr>
-					<td>
-						
-					</td>
-					<td>
-						offset
+                    <th>Condition
+                    <th>Offset
 				</tr>
 				<tr>
-					<td>
-						Serial number contains a vowel
-					</td>
-					<td>
-						-1
+					<td>Serial number contains a vowel
+					<td>-1
 				</tr>
 				<tr>
-					<td>
-						Number of batteries
-					</td>
-					<td>
-						+1 per battery
+					<td>Number of batteries
+					<td>+1 per battery
 				</tr>
 				<tr>
-					<td>
-						The last digit of the serial number is even
-					</td>
-					<td>
-						+1
-					<tr>
-					<td>
-						If Indicator with label CAR is present
-					</td>
-					<td>
-						+1
+					<td>The last digit of the serial number is even
+					<td>+1
+                </tr>
+                <tr>
+					<td>Indicator with label CAR is present
+					<td>+1
 				</tr>
 				<tr>
-					<td>
-						If parallel port is present and Indicator with label NSA is on
-					</td>
-					<td>
-						=0
-				</tr>			
+					<td>Parallel port and lit indicator with label NSA is present
+					<td>=0
+				</tr>
 			</table>
         </div>
     </div>
