@@ -3393,7 +3393,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6492499aaa2583498dcb4867f02c38c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KMAudio: {fileID: 11476316}
+  Audio: {fileID: 11476316}
+  Bomb: {fileID: 11469124}
+  Module: {fileID: 11430578}
   Buttons:
   - {fileID: 11452056}
   - {fileID: 11407408}
@@ -3407,6 +3409,19 @@ MonoBehaviour:
   - {fileID: 11493004}
   - {fileID: 11489662}
   - {fileID: 11443348}
+  ButtonLabels:
+  - {fileID: 10295172}
+  - {fileID: 10299440}
+  - {fileID: 10266472}
+  - {fileID: 10291850}
+  - {fileID: 10240022}
+  - {fileID: 10260580}
+  - {fileID: 10266362}
+  - {fileID: 10232436}
+  - {fileID: 10264970}
+  - {fileID: 10298650}
+  - {fileID: 10207196}
+  - {fileID: 10247132}
   DisplayText: {fileID: 10294330}
 --- !u!114 &11425820
 MonoBehaviour:
