@@ -42,12 +42,14 @@ public class CeasarCipherModule : MonoBehaviour
         {
             var index = Rnd.Range(0, randomChars.Count);
             var letter = randomChars[index];
+            var j = i;
             randomChars.RemoveAt(index);
 
             ButtonLabels[i].text = letter.ToString();
             Buttons[i].OnInteract += delegate
             {
-                Audio.PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, transform);
+                Audio.PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, Buttons[j].transform);
+                Buttons[j].AddInteractionPunch();
                 _answer += letter;
                 if (_answer.Length == _puzzleWord.Length)
                 {
