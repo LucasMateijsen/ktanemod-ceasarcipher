@@ -22,11 +22,9 @@ MonoBehaviour:
     and check the labels to calculate the offset.
 
 
-    [url=https://rawgit.com/LucasMateijsen/ktanemod-ceasarcipher/master/Manual/CaesarCipher.html]Manual
-    HTML[/url]
+    [url=http://ktane.timwi.de/HTML/Caesar%20Cipher.html]Manual HTML[/url]
 
-    [url=https://rawgit.com/LucasMateijsen/ktanemod-ceasarcipher/master/Manual/pdfs/Modules/CaesarCipher.pdf]Manual
-    PDF[/url]
+    [url=http://ktane.timwi.de/PDF/Caesar%20Cipher.pdf]Manual PDF[/url]
 
 
     For mission creators: The module type/name is "Ceasar Cipher".
@@ -35,5 +33,4 @@ MonoBehaviour:
     We based our prefab on EmojiMath (Math is Hard) which you can find [url=https://steamcommunity.com/sharedfiles/filedetails/?id=729096093]here[/url]'
   PreviewImage: {fileID: 2800000, guid: 8c1678337d414074ca57b4b2024a8b19, type: 3}
   Tags:
-  - Module
   - Regular Module
