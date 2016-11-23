@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf2299c8864afe4ab42466f546ae20d, type: 3}
   m_Name: WorkshopItem
   m_EditorClassIdentifier: 
-  WorkshopPublishedFileID: 757232985
+  WorkshopPublishedFileID: 804644203
   Title: Caesar Cipher
   Description: 'Communication was dangerous back in the days. Can you figure out what
     the original message was?
@@ -27,10 +27,10 @@ MonoBehaviour:
     [url=http://ktane.timwi.de/PDF/Caesar%20Cipher.pdf]Manual PDF[/url]
 
 
-    For mission creators: The module type/name is "Ceasar Cipher".
+    For mission creators: The module type is "CaesarCipherModule".
 
 
-    We based our prefab on EmojiMath (Math is Hard) which you can find [url=https://steamcommunity.com/sharedfiles/filedetails/?id=729096093]here[/url]'
+    We based our prefab on EmojiMath (Math is Hard) which you can find [url=https://steamcommunity.com/sharedfiles/filedetails/?id=729096093]here[/url].'
   PreviewImage: {fileID: 2800000, guid: 8c1678337d414074ca57b4b2024a8b19, type: 3}
   Tags:
   - Regular Module
