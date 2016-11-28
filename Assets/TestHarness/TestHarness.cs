@@ -141,9 +141,17 @@ public class TestHarness : MonoBehaviour
             }
         }
 
+        if (Input.GetMouseButtonUp(0))
+        {
+            if (currentSelectableArea != null)
+            {
+                currentSelectableArea.Selectable.InteractEnded();
+            }
+        }
+
         if (Input.GetMouseButtonDown(1))
         {
-            if (currentSelectable.Parent != null)
+            if (currentSelectable.Parent != null && currentSelectable.Cancel())
             {
                 currentSelectable.DeactivateChildSelectableAreas(currentSelectable.Parent);
                 currentSelectable = currentSelectable.Parent;
@@ -200,6 +208,13 @@ public class TestHarness : MonoBehaviour
                 {
                     module.OnActivate();
                 }
+            }
+            foreach (KMNeedyModule module in GameObject.FindObjectsOfType<KMNeedyModule>())
+            {
+            	if (module.OnActivate != null)
+            	{
+            		module.OnActivate();
+            	}
             }
         }
 
